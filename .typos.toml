@@ -1,0 +1,8 @@
+[default.extend-words]
+nd = "nd"
+
+[files]
+extend-exclude = [
+    "go.mod",
+    "go.sum",
+]
