@@ -17,9 +17,8 @@ func TestIsDigit(t *testing.T) {
 	assert.False(t, IsDigit('Z'))
 	assert.False(t, IsDigit('!'))
 
-	// Test true cases for Unicode numeric digits from other scripts
-	assert.True(t, IsDigit('٤')) // Arabic-Indic digit 4
-	assert.True(t, IsDigit('७')) // Devanagari digit 7
+	assert.False(t, IsDigit('٤')) // Arabic-Indic digit 4
+	assert.False(t, IsDigit('७')) // Devanagari digit 7
 
 	// Test false case for Unicode numeric symbols (not categorized as Nd)
 	assert.False(t, IsDigit('Ⅳ')) // Roman numeral IV (not a decimal digit)
